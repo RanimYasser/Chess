@@ -10,9 +10,21 @@ package ChessCore;
  */
 public class Pawn extends Piece {
 
+   
+
     @Override
-    public boolean isValidMove() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean isValidMove(int CurrentX ,int CurrentY,int TargetX, int TargetY) {
+        if (this.FirstMove)
+        {
+        if(TargetX==CurrentX&&TargetY==CurrentY+1||TargetX==CurrentX&&TargetY==CurrentY+2)
+        return true;
+            }
+        else {
+        if (TargetX==CurrentX&&TargetY==CurrentY+1)
+            return true;
+        }
+        return false;
     }
-    
-}
+} 
+   
+

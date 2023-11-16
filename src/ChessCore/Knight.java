@@ -9,10 +9,10 @@ package ChessCore;
  * @author Win11
  */
 public class Knight extends Piece {
-
+//note this piece is the only one that can jump
     @Override
-    public boolean isValidMove() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean isValidMove(int CuurentX ,int CurrentY,int TargetX, int TargetY) {
+     return true;  
     }
     
 }

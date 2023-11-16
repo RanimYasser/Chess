@@ -8,11 +8,14 @@ package ChessCore;
  *
  * @author Win11
  */
-public class King extends Piece {
+public class Rook extends Piece {
 
     @Override
-    public boolean isValidMove(int CuurentX ,int CurrentY,int TargetX, int TargetY) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean isValidMove(int CurrentX, int CurrentY, int TargetX, int TargetY) {
+      if (VerticalMove(CurrentX, CurrentY, TargetX, TargetY)&&HorizontalMove(CurrentX, CurrentY, TargetX, TargetY))
+    return true;
+      return false;
+    
     }
     
 }

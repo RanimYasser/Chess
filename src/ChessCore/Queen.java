@@ -11,8 +11,10 @@ package ChessCore;
 public class Queen extends Piece{
 
     @Override
-    public boolean isValidMove() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public boolean isValidMove(int CuurentX ,int CurrentY,int TargetX, int TargetY) {
+       if (HorizontalMove(CurrentY, CurrentY, TargetX, TargetY)||VerticalMove(CurrentY, CurrentY, TargetX, TargetY)||DiagonalMove(CurrentY, CurrentY, TargetX, TargetY))
+   return true;
+       return false;
+           }
     
 }

@@ -12,9 +12,30 @@ PAWN,BISHOP,KNIGHT,ROOK,QEEN,KING;
 }
 public abstract class Piece {
     Color color;
+    boolean FirstMove;
     
-public abstract boolean isValidMove() ;
-
-
+   public boolean DiagonalMove(int CurrentX,int CurrentY,int TargetX ,int TargetY)
+    {
+      if (CurrentX-TargetX==CurrentY-TargetY)
+    return true;
+        return false;
+            }
+    public boolean VerticalMove(int CurrentX,int CurrentY,int TargetX ,int TargetY)
+    {
+    if (CurrentX == TargetX )
+    return true;
+    return false;
+        }
+     public boolean HorizontalMove(int CurrentX,int CurrentY,int TargetX ,int TargetY)
+    {
+    if (CurrentY == TargetY )
+    return true;
+    return false;
+        }
+    public abstract boolean isValidMove(int CurrentX,int CurrentY,int TargetX ,int TargetY);
  
-}
+    
+     
+
+            
+            }
